@@ -9,7 +9,7 @@ var nx = {
         return this;
     }).call(null)
 };
-
+nx.global.nx = nx;
 
 // prepare for cross browser
 (function () {
