@@ -10039,6 +10039,11 @@ nx.global.nx = nx;
             width: 32,
             height: 32,
             font: ["\ue64e", "\ue64c"]
+        },
+        port: {
+            width: 32,
+            height: 32,
+            font: ["\ue900", "\ue619"]
         }
     };
 
@@ -26059,7 +26064,7 @@ nx.global.nx = nx;
                         },
                         content: [{
                                 name: 'zoomin',
-                                tag: 'span',
+                                tag: 'li',
                                 props: {
                                     'class': 'n-topology-nav-zoom-in n-icon-zoomin-plus',
                                     title: "Zoom out"
@@ -26070,7 +26075,7 @@ nx.global.nx = nx;
                                 }
                             }, {
                                 name: 'zoomout',
-                                tag: 'span',
+                                tag: 'li',
                                 props: {
                                     'class': 'n-topology-nav-zoom-out n-icon-zoomout-minus',
                                     title: "Zoom in"
@@ -26079,217 +26084,30 @@ nx.global.nx = nx;
                                     'click': '{#_out}',
                                     'touchend': '{#_out}'
                                 }
-                            }
-
-                        ]
-                    }, {
-                        tag: 'li',
-                        name: 'zoomselection',
-                        props: {
-                            'class': 'n-topology-nav-zoom-selection n-icon-zoombyselection',
-                            title: "Zoom by selection"
-                        },
-                        events: {
-                            'click': '{#_zoombyselection}',
-                            'touchend': '{#_zoombyselection}'
-                        }
-                    }, {
-                        tag: 'li',
-                        name: 'fit',
-                        props: {
-                            'class': 'n-topology-nav-fit n-icon-fitstage',
-                            title: "Fit stage"
-                        },
-                        events: {
-                            'click': '{#_fit}',
-                            'touchend': '{#_fit}'
-                        }
-                    },
-                    //                        {
-                    //                            tag: 'li',
-                    //                            name: 'agr',
-                    //                            props: {
-                    //                                'class': 'n-topology-nav-agr',
-                    //                                title: "Aggregation"
-                    //                            },
-                    //                            content: [
-                    //                                {
-                    //                                    tag: 'span',
-                    //                                    props: {
-                    //                                        'class': 'glyphicon glyphicon-certificate   agr-icon'
-                    //                                    }
-                    //                                },
-                    //                                {
-                    //                                    tag: 'span',
-                    //                                    content: 'A',
-                    //                                    props: {
-                    //                                        'class': 'agr-text'
-                    //                                    }
-                    //                                }
-                    //                            ],
-                    //                            events: {
-                    //                                'click': '{#_agr}'
-                    //                            }
-                    //                        },
-
-
-
-                    {
-                        tag: 'li',
-                        name: 'agr',
-                        props: {
-                            'class': 'n-topology-nav-agr n-icon-aggregation',
-                            title: 'Aggregation'
-                        },
-                        events: {
-                            'click': '{#_agr}',
-                            'touchend': '{#_agr}'
-                        }
-                    }, {
-                        tag: 'li',
-                        name: 'fullscreen',
-                        props: {
-                            'class': 'n-topology-nav-full n-icon-fullscreen',
-                            title: 'Enter full screen mode'
-                        },
-                        events: {
-                            'click': '{#_full}',
-                            'touchend': '{#_full}'
-                        }
-                    }, {
-                        tag: 'li',
-                        name: 'setting',
-                        content: [{
-                            name: 'icon',
-                            tag: 'span',
-                            props: {
-                                'class': 'n-topology-nav-setting-icon n-icon-viewsetting'
-                            },
-                            events: {
-                                mouseenter: "{#_openPopover}",
-                                mouseleave: "{#_closePopover}",
-                                //touchend: "{#_togglePopover}"
-                            }
-                        }, {
-                            name: 'settingPopover',
-                            type: 'nx.ui.Popover',
-                            props: {
-                                title: 'Topology Setting',
-                                direction: "right",
-                                lazyClose: true
-                            },
-                            content: [{
-                                tag: 'h5',
-                                content: "Display icons as dots :"
                             }, {
-                                tag: 'label',
-                                content: [{
-                                    tag: 'input',
-                                    props: {
-                                        type: 'radio',
-                                        checked: '{#showIcon,converter=inverted,direction=<>}'
-                                    }
-                                }, {
-                                    tag: 'span',
-                                    content: "Always"
-                                }],
+                                name: 'fit',
+                                tag: 'li',
                                 props: {
-                                    'class': 'radio-inline'
-                                }
-                            }, {
-                                tag: 'label',
-                                content: [{
-                                    tag: 'input',
-                                    props: {
-                                        type: 'radio',
-                                        checked: '{#showIcon,direction=<>}'
-                                    }
-                                }, {
-                                    tag: 'span',
-                                    content: "Auto-resize"
-                                }],
-                                props: {
-                                    'class': 'radio-inline'
-                                }
-                            }, {
-                                name: 'displayLabelSetting',
-                                tag: 'h5',
-                                content: [{
-                                    tag: 'span',
-                                    content: 'Display Label : '
-                                }, {
-                                    tag: 'input',
-                                    props: {
-                                        'class': 'toggleLabelCheckBox',
-                                        type: 'checkbox',
-                                        checked: true
-                                    },
-                                    events: {
-                                        click: '{#_toggleNodeLabel}',
-                                        touchend: '{#_toggleNodeLabel}'
-                                    }
-                                }]
-                            }, {
-                                tag: 'h5',
-                                content: "Theme :"
-                            }, {
-
-                                props: {
-                                    'class': 'btn-group'
+                                    'class': 'n-topology-nav-fit n-icon-fitstage',
+                                    title: "Fit stage"
                                 },
-                                content: [{
-                                        tag: 'button',
-                                        props: {
-                                            'class': 'btn btn-default',
-                                            value: 'blue'
-                                        },
-                                        content: "Blue"
-                                    }, {
-                                        tag: 'button',
-                                        props: {
-                                            'class': 'btn btn-default',
-                                            value: 'green'
-                                        },
-                                        content: "Green"
-                                    }, {
-                                        tag: 'button',
-                                        props: {
-                                            'class': 'btn btn-default',
-                                            value: 'dark'
-                                        },
-                                        content: "Dark"
-                                    }, {
-                                        tag: 'button',
-                                        props: {
-                                            'class': 'btn btn-default',
-                                            value: 'slate'
-                                        },
-                                        content: "Slate"
-                                    }, {
-                                        tag: 'button',
-                                        props: {
-                                            'class': 'btn btn-default',
-                                            value: 'yellow'
-                                        },
-                                        content: "Yellow"
-                                    }
-
-                                ],
                                 events: {
-                                    'click': '{#_switchTheme}',
-                                    'touchend': '{#_switchTheme}'
+                                    'click': '{#_fit}',
+                                    'touchend': '{#_fit}'
                                 }
                             }, {
-                                name: 'customize'
-                            }],
-                            events: {
-                                'open': '{#_openSettingPanel}',
-                                'close': '{#_closeSettingPanel}'
+                                name: 'zoomselection',
+                                tag: 'li',
+                                props: {
+                                    'class': 'n-topology-nav-zoom-selection n-icon-zoombyselection',
+                                    title: "Zoom by selection"
+                                },
+                                events: {
+                                    'click': '{#_zoombyselection}',
+                                    'touchend': '{#_zoombyselection}'
+                                }
                             }
-                        }],
-                        props: {
-                            'class': 'n-topology-nav-setting'
-                        }
+                        ]
                     }
                 ]
             }]
@@ -26297,14 +26115,6 @@ nx.global.nx = nx;
         methods: {
             init: function(args) {
                 this.inherited(args);
-
-
-                this.view('settingPopover').view().dom().addClass('n-topology-setting-panel');
-
-
-                if (window.top.frames.length) {
-                    this.view("fullscreen").style().set("display", 'none');
-                }
             },
             attach: function(args) {
                 this.inherited(args);
@@ -26319,10 +26129,6 @@ nx.global.nx = nx;
                     });
                 }, this);
 
-                topo.selectedNodes().watch('count', function(prop, value) {
-                    this.view('agr').dom().setStyle('display', value > 1 ? 'block' : 'none');
-                }, this);
-
                 topo.watch('currentSceneName', function(prop, currentSceneName) {
                     if (currentSceneName == 'selection') {
                         this.view("selectionMode").dom().addClass("n-topology-nav-mode-selected");
@@ -26332,10 +26138,6 @@ nx.global.nx = nx;
                         this.view("moveMode").dom().addClass("n-topology-nav-mode-selected");
                     }
                 }, this);
-
-
-                this.view('agr').dom().setStyle('display', 'none');
-
             },
             _switchSelectionMode: function(sender, event) {
                 var topo = this.topology();
@@ -26356,13 +26158,6 @@ nx.global.nx = nx;
             _fit: function(sender, event) {
                 if (!this._fitTimer) {
                     this.topology().fit();
-
-                    sender.dom().setStyle('opacity', '0.1');
-                    this._fitTimer = true;
-                    setTimeout(function() {
-                        sender.dom().setStyle('opacity', '1');
-                        this._fitTimer = false;
-                    }.bind(this), 1200);
                 }
             },
             _zoombyselection: function(sender, event) {
