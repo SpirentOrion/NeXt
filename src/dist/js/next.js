@@ -10043,7 +10043,7 @@ nx.global.nx = nx;
         port: {
             width: 32,
             height: 32,
-            font: ["\ue900", "\ue619"]
+            font: ["\ue650", "\ue619"]
         }
     };
 
