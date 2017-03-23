@@ -126,7 +126,7 @@
   content: "\e62c";
 }
 .n-icon-movemode:before {
-  content: url("../svg/ico-pan.svg");
+  content: url("../img/ico-pan.png");
 }
 .n-icon-RCV:before {
   content: "\e62a";
@@ -213,10 +213,10 @@
   content: "\e617";
 }
 .n-icon-zoomout-minus:before {
-  content: url("../svg/ico-zoom-out.svg");
+  content: url("../img/ico-zoom-out.png");
 }
 .n-icon-zoomin-plus:before {
-  content: url("../svg/ico-zoom-in.svg");
+  content: url("../img/ico-zoom-in.png");
 }
 .n-icon-zoomout:before {
   content: "\e606";
@@ -225,16 +225,16 @@
   content: "\e607";
 }
 .n-icon-zoombyselection:before {
-  content: url("../svg/ico-zoom-selection.svg");
+  content: url("../img/ico-zoom-selection.png");
 }
 .n-icon-viewsetting:before {
   content: "\e609";
 }
 .n-icon-selectnode:before {
-  content: url("../svg/ico-select.svg");
+  content: url("../img/ico-select.png");
 }
 .n-icon-fitstage:before {
-  content: url("../svg/ico-fit-zoom.svg");
+  content: url("../img/ico-fit-zoom.png");
 }
 .n-icon-aggregation:before {
   content: "\e60e";
