@@ -363,7 +363,6 @@
   fill: #0386d2;
 }
 .n-topology .node text.node-label {
-  font-family: "Cisco Sans Reg";
   fill: #0386d2;
   pointer-events: none;
   -webkit-user-select: none;
@@ -371,7 +370,7 @@
   -ms-user-select: none;
   -o-user-select: none;
   user-select: none;
-  font-size: 11px;
+  font-size: 10px;
 }
 .n-topology .node.disable .node-label {
   fill: #ccc !important;
@@ -397,18 +396,15 @@
   stroke: #26a1c5 !important;
 }
 .n-topology .link .link-label {
-  font-family: "Cisco Sans Reg";
   fill: #0386d2;
   font-size: 12px;
 }
 .n-topology .link .source-abel {
-  font-family: "Cisco Sans Reg";
   fill: #0386d2;
   opacity: 0.8;
   font-size: 12px;
 }
 .n-topology .link .target-label {
-  font-family: "Cisco Sans Reg";
   fill: #0386d2;
   opacity: 0.8;
   font-size: 12px;
@@ -455,7 +451,6 @@
   pointer-events: none;
 }
 .n-topology .nodeset text.node-label {
-  font-family: "Cisco Sans Reg";
   fill: #0386d2;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -494,7 +489,6 @@
 .n-topology .group .groupLabel {
   cursor: pointer;
   font-size: 18px;
-  font-family: "Cisco Sans Reg";
   text-anchor: middle;
   alignment-baseline: inherit;
 }
@@ -504,7 +498,6 @@
 .n-topology .group .nodeSetGroupLabel {
   cursor: pointer;
   font-size: 18px;
-  font-family: "Cisco Sans Reg";
   alignment-baseline: inherit;
   fill: #9BB150;
 }
@@ -539,7 +532,6 @@
   stroke-linejoin: round;
 }
 .n-topology .link-set-text {
-  font-family: "Cisco Sans Reg";
   fill: #ffffff;
   text-anchor: middle;
   dominant-baseline: central;
