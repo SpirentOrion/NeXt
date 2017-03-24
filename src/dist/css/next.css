@@ -862,7 +862,8 @@
   min-width: 160px;
   line-height: 24px;
   position: relative;
-  border-bottom: dotted 1px #ccc;
+  border-bottom: 1px solid #989898;
+  padding: 0 15px;
 }
 .n-topology-tooltip-header-actions {
   float: right;
@@ -871,14 +872,13 @@
   cursor: pointer;
 }
 .n-topology-tooltip-header-text {
-  line-height: 24px;
-  color: #333;
-  font-size: 14px;
-  font-weight: bold;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 15px;
+  color: #ffffff;
 }
 .n-topology-tooltip-content {
-  margin-bottom: 6px;
-  padding: 5px;
+  padding: 5px 15px;
   min-height: 30px;
 }
 .n-topology-tooltip-content label {
@@ -903,7 +903,7 @@
   display: none;
 }
 .n-topology-tooltip .popover-content {
-  padding: 5px 10px;
+  padding: 5px 0;
 }
 .n-topology-setting-panel {
   max-width: 342px !important;
