@@ -17850,6 +17850,7 @@ nx.global.nx = nx;
                     var _height = Math.max(height, 300 + this.padding() * 2);
                     if (_height != this._height) {
                         this._height = _height;
+						modified = true;
                     }
                 }
 
